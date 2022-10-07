@@ -28,6 +28,8 @@ ul {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .header-box {
   border-bottom: 1px solid #ececec;
@@ -57,7 +59,7 @@ img {
   letter-spacing: 0.03em;
 }
 .logo-header {
-  padding-right: 93px;
+  margin-right: 93px;
 }
 .logo-web {
   color: var(--accent-color);
@@ -86,8 +88,7 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 30px;
-  row-gap: 30px;
+  gap: 30px;
 }
 .portfolio-list-item {
   width: 370px;
@@ -95,6 +96,9 @@ img {
 .header-list {
   display: flex;
   align-items: center;
+}
+.header-list-item:not(:last-child) {
+  margin-right: 50px;
 }
 .nav-elem {
   color: var(--primary-text-color);
@@ -104,10 +108,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.nav-portfolio {
-  padding-left: 50px;
-  padding-right: 50px;
-}
+
 .link-current {
   color: var(--accent-color);
 }
@@ -118,9 +119,6 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-.contact-header {
-  padding-left: 50px;
 }
 
 .filter {
@@ -143,9 +141,9 @@ img {
 }
 .filter-content-box {
   padding: 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  
 }
 .content-name {
   color: var(--second-text-color);
@@ -155,6 +153,7 @@ img {
 }
 .hero {
   background: var(--background);
+  padding: 200px 0;
 }
 .section {
   padding-top: 94px;
@@ -173,7 +172,6 @@ img {
   text-transform: uppercase;
 
   width: 696px;
-  margin-top: 106px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -204,7 +202,6 @@ img {
   display: block;
   margin-top: 30px;
   margin-right: auto;
-  margin-bottom: 106px;
   margin-left: auto;
   padding: 10px 32px;
 }
@@ -256,6 +253,10 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.employees-description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .team-title {
   font-weight: 500;
   font-size: 16px;
@@ -263,7 +264,6 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 .team-text {
@@ -272,20 +272,16 @@ img {
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
-
-  margin-bottom: 30px;
 }
-.footer-block {
+.footer {
   background: var(--background);
-}
-.footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .address {
   font-style: normal;
 }
-.address-item {
+.address-item:not(:last-child) {
   margin-bottom: 9px;
 }
 .address-link {
